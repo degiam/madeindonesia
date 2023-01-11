@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+
+/* body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+  }
+  body {
+    @apply font-theme-1 cursor-default max-md:overflow-hidden bg-[url('mesh.png')] bg-no-repeat bg-[length:150%] md:bg-[length:100%] lg:bg-[length:90%] bg-[top_center] md:bg-[top_right] lg:bg-[top_-200px];
+  }
+}
+
+@layer components {
+  .button {
+    @apply flex justify-center w-full h-full rounded-xl py-3 px-4 md:px-6 shadow-xl font-medium text-sm md:text-base focus-visible:outline-none duration-200 text-white bg-emerald-500 md:hover:bg-emerald-600 disabled:bg-emerald-300 disabled:hover:bg-emerald-300;
+  }
+  .radio {
+    @apply cursor-pointer appearance-none rounded-full min-w-[1.5rem] w-6 h-6 text-emerald-600 bg-gray-100 border border-gray-200;
+  }
+  .radio:checked {
+    @apply bg-emerald-500 border-4 border-emerald-500;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="white"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>');
+  }
+  .radio-label {
+    @apply cursor-pointer;
+  }
+  .card {
+    @apply relative bg-white p-7 rounded-2xl shadow-xl;
+  }
+}
+
+@layer utilities {}
